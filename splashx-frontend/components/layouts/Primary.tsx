@@ -1,5 +1,10 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
+import Hero from "../Hero";
 
 export default function Primary() {
-  return <Box>Primary</Box>;
+  return (
+    <Box>
+      <Hero />
+    </Box>
+  );
 }

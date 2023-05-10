@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import {
   Box,
+  Image,
   Flex,
   HStack,
   Link,
@@ -39,9 +40,11 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue("black", "white")} px={4}>
+      <Box bg={useColorModeValue("black", "brand.white")} px={4} py={2}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>Logo</Box>
+          <Link href="/" _hover={{ opacity: 0.7 }}>
+            <Image width={"90%"} src="/images/splashX-logo.svg" alt="SplashX" />
+          </Link>
           <Flex alignItems={"center"}>
             <IconButton
               size={"md"}
@@ -54,7 +57,7 @@ export default function Simple() {
               spacing={8}
               alignItems={"center"}
               paddingRight={"6"}
-              textColor={useColorModeValue("white", "black")}
+              textColor={useColorModeValue("brand.white", "brand.black")}
             >
               <HStack
                 as={"nav"}
@@ -79,7 +82,7 @@ export default function Simple() {
                   variant={"link"}
                   cursor={"pointer"}
                   minW={0}
-                  bg={useColorModeValue("white", "black")}
+                  bg={useColorModeValue("brand.white", "brand.black")}
                 >
                   <Button
                     as={"a"}
@@ -87,7 +90,7 @@ export default function Simple() {
                     fontWeight={400}
                     variant={"link"}
                     href={"#"}
-                    textColor={useColorModeValue("black", "white")}
+                    textColor={useColorModeValue("brand.black", "brand.white")}
                   >
                     Sign In
                   </Button>

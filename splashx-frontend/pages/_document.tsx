@@ -22,7 +22,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>SplashX - Earn by Creating & Watching AI-generated Anime</Head>
+        {/* <Head>SplashX - Earn by Creating & Watching AI-generated Anime</Head> */}
         <body>
           <Main />
           <NextScript />
