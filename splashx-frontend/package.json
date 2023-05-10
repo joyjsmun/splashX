@@ -2,10 +2,12 @@
   "name": "splashx-frontend",
   "version": "0.1.0",
   "private": true,
+  "author": "Team Splash<splash-official@protonmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prettier": "prettier -write",
     "lint": "next lint"
   },
   "dependencies": {
