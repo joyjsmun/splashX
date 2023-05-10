@@ -3,6 +3,7 @@ import {
   Flex,
   Button,
   Text,
+  Heading,
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -24,14 +25,14 @@ export default function Hero() {
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack maxW={"2xl"} align={"flex-start"} spacing={6} pl={10} pt={10}>
-          <Text
+          <Heading
             color={"white"}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "6xl", md: "7xl" })}
+            fontSize={useBreakpointValue({ base: "7xl", md: "8xl" })}
           >
             Hero
-          </Text>
+          </Heading>
           <Text
             color={"brand.gray"}
             fontWeight={400}
@@ -45,10 +46,10 @@ export default function Hero() {
           </Text>
 
           <Button
-            bg={"brand.pink"}
+            bgGradient="linear(to-l, #7928CA, brand.pink)"
             rounded={"lg"}
             color={"white"}
-            _hover={{ bg: "blue.500" }}
+            _hover={{ bg: "pink.400" }}
           >
             Watch Anime
           </Button>
