@@ -26,15 +26,15 @@ export default function Hero() {
       >
         <Stack maxW={"2xl"} align={"flex-start"} spacing={6} pl={10} pt={10}>
           <Heading
-            color={"white"}
+            color={"brand.white"}
             fontWeight={700}
-            lineHeight={1.2}
+            lineHeight={1}
             fontSize={useBreakpointValue({ base: "7xl", md: "8xl" })}
           >
             Hero
           </Heading>
           <Text
-            color={"brand.gray"}
+            color={"brand.white"}
             fontWeight={400}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "md", md: "lg" })}
@@ -42,13 +42,14 @@ export default function Hero() {
             For someone who was temporarily given the job of being a shinigami
             (death god), Ichigo has done pretty well for himself. He has trained
             in martial arts since he was young and continued to grow as he’s
-            learned about his new powers. He masters advanced techniques
+            learned about his new powers.
           </Text>
 
           <Button
             bgGradient="linear(to-l, #7928CA, brand.pink)"
             rounded={"lg"}
             color={"white"}
+            fontWeight={700}
             _hover={{ bg: "pink.400" }}
           >
             Watch Anime

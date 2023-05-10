@@ -57,6 +57,7 @@ export default function Simple() {
               spacing={8}
               alignItems={"center"}
               paddingRight={"6"}
+              fontWeight={500}
               textColor={useColorModeValue("brand.white", "brand.black")}
             >
               <HStack
@@ -71,9 +72,9 @@ export default function Simple() {
             </HStack>
             {/* Biconomy Sign-in */}
             <Stack direction={"row"} spacing={7}>
-              <Button onClick={toggleColorMode}>
+              {/* <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
+              </Button> */}
               <Menu>
                 <MenuButton
                   as={Button}
@@ -87,7 +88,7 @@ export default function Simple() {
                   <Button
                     as={"a"}
                     fontSize={"md"}
-                    fontWeight={400}
+                    fontWeight={700}
                     variant={"link"}
                     href={"#"}
                     textColor={useColorModeValue("brand.black", "brand.white")}
