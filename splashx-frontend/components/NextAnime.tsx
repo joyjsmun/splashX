@@ -4,7 +4,7 @@ export default function NextAnime() {
   return (
     <Box>
       <VStack alignItems={"flex-start"} pt={"20"}>
-        <Text fontSize={"5xl"} fontWeight={"bold"}>
+        <Text fontSize={"4xl"} fontWeight={"bold"} pb={4}>
           Next Episode
         </Text>
         <HStack gap={10}>

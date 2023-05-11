@@ -15,10 +15,14 @@ export default function Footer() {
       color={useColorModeValue("brand.gray", "gray.200")}
     >
       <Box py={4}>
-        <Flex justifyContent={"center"} gap={2}>
-          <Link>Twitter</Link>
+        <Flex justifyContent={"center"} gap={4}>
+          <Link href="https://twitter.com/splashdotwatch">
+            <Image src="/images/twitter.png" />
+          </Link>
           <Text>|</Text>
-          <Link>Telegram</Link>
+          <Link href="https://t.me/+HtLsWa3PB6AwMDk9">
+            <Image src="/images/telegram.png" />
+          </Link>
         </Flex>
         <Text pt={2} fontSize={"sm"} textAlign={"center"}>
           ⓒ 2023 SplashX. All rights reserved.

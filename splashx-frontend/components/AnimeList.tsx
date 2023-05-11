@@ -11,7 +11,15 @@ for (let i = 1; i <= 15; i++) {
 export default function AnimeList() {
   return (
     <Box>
-      <Text color={"brand.white"}>This Week Trending Animes</Text>
+      <Text
+        color={"brand.white"}
+        fontSize={"4xl"}
+        fontWeight={"bold"}
+        pb={4}
+        pl={6}
+      >
+        This Week Trending Animes
+      </Text>
       <Flex w={"full"} h={"95vh"} justifyContent={"center"}>
         <Grid
           templateRows="repeat(3,1fr)"
