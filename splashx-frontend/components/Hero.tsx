@@ -46,6 +46,7 @@ export default function Hero() {
           </Text>
 
           <Button
+            size={"lg"}
             bgGradient="linear(to-l, #7928CA, brand.pink)"
             rounded={"lg"}
             color={"white"}

@@ -54,6 +54,7 @@ export default function MainFeature() {
           AI-generated Anime
         </Heading>
         <Button
+          size={"lg"}
           bgGradient="linear(to-l,  brand.darkBlue,#012b9e,)"
           rounded={"lg"}
           color={"white"}

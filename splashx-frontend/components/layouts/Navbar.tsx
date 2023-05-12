@@ -19,17 +19,19 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const Links = [
   { name: "Home", param: "/" },
-  { name: "Generate Anime", param: "generateAnime" },
-  { name: "Watch Anime", param: "watchAnime" },
-  { name: "My Animes", param: "myAnimes" },
+  { name: "Generate Anime", param: "/generateAnime" },
+  { name: "Watch Anime", param: "/watchAnime" },
+  { name: "My Animes", param: "/myAnimes" },
 ];
 
 const NavLink = ({
   children,
   param,
+  name,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   param: string;
+  name: string;
 }) => (
   <Link
     px={2}
@@ -39,9 +41,9 @@ const NavLink = ({
       textDecoration: "none",
       bg: useColorModeValue("gray", "gray"),
     }}
-    href={`/${param}`}
+    href={`${param}`}
   >
-    {children}
+    {name}
   </Link>
 );
 
@@ -52,7 +54,12 @@ export default function Simple() {
   return (
     <>
       <Box bg={useColorModeValue("brand.black", "brand.white")} px={4} py={2}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex
+          h={20}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          px={6}
+        >
           <Link href="/" _hover={{ opacity: 0.7 }}>
             <Image width={"90%"} src="/images/splashX-logo.svg" alt="SplashX" />
           </Link>
@@ -77,9 +84,11 @@ export default function Simple() {
                 display={{ base: "none", md: "flex" }}
               >
                 {Links.map((link) => (
-                  <NavLink key={link.name} param={link.param}>
-                    {link.name}
-                  </NavLink>
+                  <NavLink
+                    key={link.name}
+                    param={link.param}
+                    name={link.name}
+                  />
                 ))}
               </HStack>
             </HStack>
@@ -99,17 +108,15 @@ export default function Simple() {
                   bg={useColorModeValue("brand.white", "brand.brand.black")}
                 >
                   <Button
+                    size={"lg"}
                     as={"a"}
                     fontSize={"md"}
                     fontWeight={700}
                     variant={"link"}
                     href={"#"}
-                    textColor={useColorModeValue(
-                      "brand.brand.black",
-                      "brand.white"
-                    )}
+                    textColor={useColorModeValue("brand.black", "brand.white")}
                   >
-                    Sign In
+                    Connect Wallet
                   </Button>
                 </MenuButton>
               </Menu>
@@ -121,7 +128,7 @@ export default function Simple() {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.name} param={link.param} name={link.name} />
               ))}
             </Stack>
           </Box>

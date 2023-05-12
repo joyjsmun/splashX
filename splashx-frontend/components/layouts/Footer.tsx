@@ -13,6 +13,8 @@ export default function Footer() {
     <Box
       bg={useColorModeValue("black", "gray.900")}
       color={useColorModeValue("brand.gray", "gray.200")}
+      mt={10}
+      mb={4}
     >
       <Box py={4}>
         <Flex justifyContent={"center"} gap={4}>

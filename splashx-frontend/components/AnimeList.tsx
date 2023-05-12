@@ -26,8 +26,8 @@ export default function AnimeList() {
           templateColumns="repeat(5,1fr)"
           px={8}
         >
-          {ImageLinks.map((image) => (
-            <AnimeFrame fileName={image} />
+          {ImageLinks.map((image, index) => (
+            <AnimeFrame key={image} fileName={image} gridItemKey={index} />
           ))}
         </Grid>
       </Flex>
