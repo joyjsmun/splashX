@@ -1,5 +1,13 @@
-import { Container, chakra, shouldForwardProp } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
+import {
+  useDisclosure,
+  Text,
+  Box,
+  Button,
+  chakra,
+  shouldForwardProp,
+  Container,
+} from "@chakra-ui/react";
+import { animate, isValidMotionProp, motion } from "framer-motion";
 
 const ChakraBox = chakra(motion.div, {
   /**
@@ -9,36 +17,50 @@ const ChakraBox = chakra(motion.div, {
     isValidMotionProp(prop) || shouldForwardProp(prop),
 });
 
-export default function App() {
+export default function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Container
-      h="100vh"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Container isOpen={isOpen} width={"100vw"} height={"100vw"}>
       <ChakraBox
-        animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
-          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-        }}
-        // @ts-ignore no problem in operation, although type error appears.
-        transition={{
-          duration: 3,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatType: "loop",
-        }}
-        padding="2"
-        bgGradient="linear(to-l, #7928CA, #FF0080)"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        width="100px"
-        height="100px"
+        variant="ghost"
+        mx={1}
+        py={[1, 2, 2]}
+        px={4}
+        borderRadius={5}
+        aria-label="Courses"
+        fontWeight="normal"
+        onMouseEnter={onOpen}
+        onMouseLeave={onClose}
+        bg={"white"}
+        width={"300px"}
+        height={"300px"}
+        border={"solid 2px black"}
+        textStyle={"header"}
       >
-        I'm Dizzy!
+        More{" "}
+        {isOpen ? (
+          <ChakraBox
+            width={"300px"}
+            height={"100px"}
+            bg={"yellow"}
+            onMouseEnter={onOpen}
+            onMouseLeave={onClose}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            // @ts-ignore no problem in operation, although type error appears.
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+            }}
+          >
+            <Text>Menu Item 1</Text>
+            <Text>Menu Item 2</Text>
+            <Text>Menu Item 3</Text>
+            <Button>Watch</Button>
+          </ChakraBox>
+        ) : (
+          ""
+        )}
       </ChakraBox>
     </Container>
   );

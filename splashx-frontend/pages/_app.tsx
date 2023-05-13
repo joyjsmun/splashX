@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react";
-import { ThemeProvider } from "@emotion/react";
 import type { AppProps } from "next/app";
 import Layout from "../components/layouts/Layout";
 
@@ -14,7 +13,7 @@ import "@fontsource/poppins/900.css";
 const chakraTheme: ThemeConfig = extendTheme({
   styles: {
     global: {
-      body: {
+      "html, body": {
         backgroundColor: "#000000",
         overflowX: "hidden",
       },
@@ -31,6 +30,24 @@ const chakraTheme: ThemeConfig = extendTheme({
       pink: "#DF3285",
       darkBlue: "#3D89E5",
       gray: "#888888",
+    },
+    textStyles: {
+      header: {
+        fontSize: ["200px"],
+      },
+      h1: {
+        // you can also use responsive styles
+        fontSize: ["48px", "72px"],
+        fontWeight: "bold",
+        lineHeight: "110%",
+        letterSpacing: "-2%",
+      },
+      h2: {
+        fontSize: ["36px", "48px"],
+        fontWeight: "semibold",
+        lineHeight: "110%",
+        letterSpacing: "-1%",
+      },
     },
   },
 });

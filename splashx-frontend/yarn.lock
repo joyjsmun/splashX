@@ -383,7 +383,7 @@
     "@chakra-ui/react-use-merge-refs" "2.0.7"
     "@chakra-ui/shared-utils" "2.0.5"
 
-"@chakra-ui/popover@2.1.11":
+"@chakra-ui/popover@2.1.11", "@chakra-ui/popover@^2.1.11":
   version "2.1.11"
   resolved "https://registry.yarnpkg.com/@chakra-ui/popover/-/popover-2.1.11.tgz#3f893199559b670b8acfcd1a75313469983d0ead"
   integrity sha512-ntFMKojU+ZIofwSw5IJ+Ur8pN5o+5kf/Fx5r5tCjFZd0DSkrEeJw9i00/UWJ6kYZb+zlpswxriv0FmxBlAF66w==
