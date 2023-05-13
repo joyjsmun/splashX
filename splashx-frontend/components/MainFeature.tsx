@@ -65,7 +65,7 @@ export default function MainFeature() {
           color={"white"}
           mt={2}
           fontWeight={700}
-          _hover={{ bg: "blue.400" }}
+          _hover={{ bg: "blue.400", shadow: "md" }}
         >
           Generate Anime
         </Button>
