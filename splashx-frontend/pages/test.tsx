@@ -23,25 +23,19 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     // @ts-ignore no problem in operation, although type error appears.
-    <Container isOpen={isOpen} width={"100vw"} height={"100vw"}>
+    <Container width={"100vw"} height={"100vw"}>
       <ChakraBox
         // @ts-ignore no problem in operation, although type error appears.
-        variant="ghost"
-        mx={1}
-        py={[1, 2, 2]}
-        px={4}
+
         borderRadius={5}
-        aria-label="Courses"
-        fontWeight="normal"
         onMouseEnter={onOpen}
         onMouseLeave={onClose}
-        bg={"white"}
         width={"300px"}
         height={"300px"}
-        border={"solid 2px black"}
+        border={"solid 2px white"}
         textStyle={"header"}
       >
-        More{" "}
+        More
       </ChakraBox>
       {isOpen ? (
         <ChakraBox
