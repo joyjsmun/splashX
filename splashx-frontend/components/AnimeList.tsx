@@ -1,7 +1,25 @@
 import { Flex, Grid, GridItem, Box, Text } from "@chakra-ui/react";
-import AnimeFrame from "./layouts/AnimeFrame";
+// import AnimeFrame from "./layouts/AnimeFrame";
+
+interface AnimeFrameProps {
+  fileName: string;
+  gridItemKey: number;
+}
 
 const ImageLinks: string[] = [];
+
+const AnimeFrame = (props: AnimeFrameProps) => {
+  return (
+    <GridItem
+      key={props.gridItemKey}
+      bg={"white"}
+      w="20vw"
+      backgroundImage={`url('/images/animeList/${props.fileName}')`}
+      backgroundSize={"cover"}
+      backgroundPosition={"top center"}
+    ></GridItem>
+  );
+};
 
 for (let i = 1; i <= 15; i++) {
   const imageName = `image_${i}.svg`;

@@ -14,8 +14,9 @@ import { ReactElement } from "react";
 
 export default function MainFeature() {
   return (
-    <Box
-      py={40}
+    <Flex
+      height={"50vw"}
+      justifyContent={"center"}
 
       // fontSize={useBreakpointValue({ base: "7xl", md: "8xl" })}
     >
@@ -69,6 +70,6 @@ export default function MainFeature() {
           Generate Anime
         </Button>
       </Flex>
-    </Box>
+    </Flex>
   );
 }
