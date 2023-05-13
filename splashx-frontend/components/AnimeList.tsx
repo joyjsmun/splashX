@@ -29,7 +29,7 @@ interface ImageInfo {
 }
 
 const images: ImageInfo[] = [];
-
+// @ts-ignore no problem in operation, although type error appears.
 const imageContext = require.context(
   "../public/images/animeList",
   false,
