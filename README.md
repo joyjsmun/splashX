@@ -1,6 +1,6 @@
 # About The Project
 
-- SplashX is a Web3 social video platform that allows creators to stream rewards to their earliest and most devoted fans.
+- SplashX is Earned by Creating & Watching AI - generated Anime.
 
 ## Getting Started
 
