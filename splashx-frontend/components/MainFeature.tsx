@@ -1,5 +1,5 @@
 import {
-  Container,
+  Box,
   SimpleGrid,
   Button,
   Flex,
@@ -14,7 +14,12 @@ import { ReactElement } from "react";
 
 export default function MainFeature() {
   return (
-    <Container maxW={"5xl"} py={20}>
+    <Flex
+      height={"50vw"}
+      justifyContent={"center"}
+
+      // fontSize={useBreakpointValue({ base: "7xl", md: "8xl" })}
+    >
       <Flex
         flexDirection={"column"}
         justifyContent={"center"}
@@ -25,7 +30,7 @@ export default function MainFeature() {
           color={"white"}
           fontWeight={900}
           lineHeight={1.2}
-          fontSize={useBreakpointValue({ base: "7xl", md: "8xl" })}
+          fontSize={useBreakpointValue({ base: "7xl", sm: "8xl" })}
         >
           <Flex flexDirection={"row"} gap={4}>
             <Text bgGradient="linear(to-l,  #fad60a,#e94f08,)" bgClip="text">
@@ -47,9 +52,9 @@ export default function MainFeature() {
 
         <Heading
           color={"white"}
-          fontWeight={700}
+          fontWeight={900}
           lineHeight={1.2}
-          fontSize={useBreakpointValue({ base: "7xl", md: "8xl" })}
+          fontSize={useBreakpointValue({ base: "6xl", md: "8xl" })}
         >
           AI-generated Anime
         </Heading>
@@ -60,11 +65,11 @@ export default function MainFeature() {
           color={"white"}
           mt={2}
           fontWeight={700}
-          _hover={{ bg: "blue.400" }}
+          _hover={{ bg: "blue.400", shadow: "md" }}
         >
           Generate Anime
         </Button>
       </Flex>
-    </Container>
+    </Flex>
   );
 }

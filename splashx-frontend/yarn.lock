@@ -383,7 +383,7 @@
     "@chakra-ui/react-use-merge-refs" "2.0.7"
     "@chakra-ui/shared-utils" "2.0.5"
 
-"@chakra-ui/popover@2.1.11":
+"@chakra-ui/popover@2.1.11", "@chakra-ui/popover@^2.1.11":
   version "2.1.11"
   resolved "https://registry.yarnpkg.com/@chakra-ui/popover/-/popover-2.1.11.tgz#3f893199559b670b8acfcd1a75313469983d0ead"
   integrity sha512-ntFMKojU+ZIofwSw5IJ+Ur8pN5o+5kf/Fx5r5tCjFZd0DSkrEeJw9i00/UWJ6kYZb+zlpswxriv0FmxBlAF66w==
@@ -1475,6 +1475,13 @@ chalk@^4.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
+
+chiaki@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/chiaki/-/chiaki-2.0.0.tgz#2fa2b4f3d1ff9ba87ee3860128053d62245afc1e"
+  integrity sha512-XCLb713fLcGC4hFG+3Fn9n80jws7vJsaF0TEOBp59OvtCRK7S+0UF4+DCvcSvs51M/dj2IHzn0667jd5MPb5oQ==
+  dependencies:
+    unstreamify "^2.0.0"
 
 client-only@0.0.1:
   version "0.0.1"
@@ -2702,6 +2709,13 @@ micromatch@^4.0.4:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
+midjourney-client@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/midjourney-client/-/midjourney-client-1.0.8.tgz#2bd5aee7c120389bfaaabd12a4bc35443152ac19"
+  integrity sha512-MXrC11oJynraOmC2stpyNQlKGTayof4gqzHGogwKj+KRvulzSYLt+qKKYoajvzzF2gsYk2XjyjF91BL1T93S2w==
+  dependencies:
+    node-replicate "^2.0.0"
+
 mimic-fn@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
@@ -2766,6 +2780,13 @@ next@13.4.1:
     "@next/swc-win32-arm64-msvc" "13.4.1"
     "@next/swc-win32-ia32-msvc" "13.4.1"
     "@next/swc-win32-x64-msvc" "13.4.1"
+
+node-replicate@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/node-replicate/-/node-replicate-2.0.0.tgz#227eccabdc52fd7e02a5d35d194f76700de75c44"
+  integrity sha512-vJ8wDLpDh+zEznpTgRdO52+JG5g/mEaon0y9DTkvfMwZ16XjuxnCUGpfS9P8Oea3VXH1+bZJ++a/NzjPhN6QaA==
+  dependencies:
+    chiaki "^2.0.0"
 
 npm-run-path@^4.0.1:
   version "4.0.1"
@@ -3091,6 +3112,11 @@ regexp.prototype.flags@^1.4.3, regexp.prototype.flags@^1.5.0:
     call-bind "^1.0.2"
     define-properties "^1.2.0"
     functions-have-names "^1.2.3"
+
+replicate@^0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/replicate/-/replicate-0.12.1.tgz#a8e7b61dc2f4e760463c3417802e3215ca5e3efa"
+  integrity sha512-Y95yeJte+kkPVkLrdEkHJUj3qwqhGHUf32YOn6Vc+7pVYAVAvY6Pd1MQgHatHjqNo+lStQzypta7zPiF2D0b4g==
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -3438,6 +3464,11 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
+
+unstreamify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/unstreamify/-/unstreamify-2.0.0.tgz#fad10842cde15a386fa5b590fb465c622ede7ba8"
+  integrity sha512-u4UWtoJglG5dlinKPrr0cdGOL9eGozILn1EmzQ0oforHVM+M/WB8ibwwlEQlbTYMDMIJe6TK/sbVN5WS7ePOxA==
 
 untildify@^4.0.0:
   version "4.0.0"

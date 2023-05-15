@@ -1,5 +1,15 @@
-import { Container, chakra, shouldForwardProp } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
+import {
+  useDisclosure,
+  Text,
+  Stack,
+  HStack,
+  Button,
+  chakra,
+  shouldForwardProp,
+  Container,
+  Image,
+} from "@chakra-ui/react";
+import { animate, isValidMotionProp, motion } from "framer-motion";
 
 const ChakraBox = chakra(motion.div, {
   /**
@@ -9,37 +19,72 @@ const ChakraBox = chakra(motion.div, {
     isValidMotionProp(prop) || shouldForwardProp(prop),
 });
 
-export default function App() {
+export default function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Container
-      h="100vh"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-    >
+    // @ts-ignore no problem in operation, although type error appears.
+    <Container width={"100vw"} height={"100vw"}>
       <ChakraBox
-        animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
-          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-        }}
         // @ts-ignore no problem in operation, although type error appears.
-        transition={{
-          duration: 3,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatType: "loop",
-        }}
-        padding="2"
-        bgGradient="linear(to-l, #7928CA, #FF0080)"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        width="100px"
-        height="100px"
+
+        borderRadius={5}
+        onMouseEnter={onOpen}
+        onMouseLeave={onClose}
+        width={"300px"}
+        height={"300px"}
+        border={"solid 2px white"}
+        textStyle={"header"}
       >
-        I'm Dizzy!
+        More
       </ChakraBox>
+      {isOpen ? (
+        <ChakraBox
+          width={"305px"}
+          height={"0.25fr"}
+          padding={4}
+          bottom={0}
+          color={"white"}
+          bg={"rgba(0, 0, 0, 0.8)"}
+          onMouseEnter={onOpen}
+          onMouseLeave={onClose}
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: 1, translateY: "-100%" }}
+          // @ts-ignore no problem in operation, although type error appears.
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+          }}
+        >
+          <Text fontWeight={700} fontSize={"2xl"} pb={2}>
+            Man In Mars
+          </Text>
+          <HStack>
+            <HStack>
+              <Image src="/images/eye.png" boxSize={"fit-content"} />
+              <Text fontSize={"0.7rem"}> 2,410,198 Views</Text>
+            </HStack>
+            <HStack>
+              <Image src="/images/globe.png" boxSize={"fit-content"} />
+              <Text fontSize={"0.7rem"}> Updated 3 days ago</Text>
+            </HStack>
+          </HStack>
+          <Stack alignItems={"flex-end"}>
+            <Button
+              size={"md"}
+              bgGradient="linear(to-l, #7928CA, brand.pink)"
+              rounded={"lg"}
+              color={"white"}
+              fontWeight={700}
+              _hover={{ bg: "pink.400" }}
+              mt={4}
+            >
+              Watch
+            </Button>
+          </Stack>
+        </ChakraBox>
+      ) : (
+        ""
+      )}
     </Container>
   );
 }

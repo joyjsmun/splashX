@@ -13,6 +13,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/layout": "^2.1.19",
+    "@chakra-ui/popover": "^2.1.11",
     "@chakra-ui/react": "^2.6.1",
     "@chakra-ui/transition": "^2.0.16",
     "@emotion/react": "^11.11.0",
@@ -25,10 +26,12 @@
     "eslint": "8.40.0",
     "eslint-config-next": "^13.4.1",
     "framer-motion": "^10.12.10",
+    "midjourney-client": "^1.0.8",
     "next": "13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lorem-ipsum": "^1.4.10",
+    "replicate": "^0.12.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
