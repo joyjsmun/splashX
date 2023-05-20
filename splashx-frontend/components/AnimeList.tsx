@@ -61,7 +61,7 @@ export default function AnimeList() {
     <Box>
       <Text
         color={"brand.white"}
-        fontSize={"4xl"}
+        fontSize={{ base: "3vw", md: "4vw" }}
         fontWeight={"bold"}
         pb={4}
         pl={6}

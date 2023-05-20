@@ -15,10 +15,10 @@ import { ReactElement } from "react";
 export default function MainFeature() {
   return (
     <Flex
-      height={"50vw"}
+      height={{ base: "70vw", md: "50vw" }}
       justifyContent={"center"}
+      pb={{ base: "5vw", md: "6vw" }}
 
-      // fontSize={useBreakpointValue({ base: "7xl", md: "8xl" })}
     >
       <Flex
         flexDirection={"column"}
@@ -30,7 +30,7 @@ export default function MainFeature() {
           color={"white"}
           fontWeight={900}
           lineHeight={1.2}
-          fontSize={useBreakpointValue({ base: "7xl", sm: "8xl" })}
+          fontSize={useBreakpointValue({ base: "5vw", md: "6vw" })}
         >
           <Flex flexDirection={"row"} gap={4}>
             <Text bgGradient="linear(to-l,  #fad60a,#e94f08,)" bgClip="text">
@@ -54,12 +54,12 @@ export default function MainFeature() {
           color={"white"}
           fontWeight={900}
           lineHeight={1.2}
-          fontSize={useBreakpointValue({ base: "6xl", md: "8xl" })}
+          fontSize={useBreakpointValue({ base: "5vw", md: "6vw" })}
         >
           AI-generated Anime
         </Heading>
         <Button
-          size={"lg"}
+          size={useBreakpointValue({ base: "md", md: "lg" })}
           bgGradient="linear(to-l,  brand.darkBlue,#012b9e,)"
           rounded={"lg"}
           color={"white"}
