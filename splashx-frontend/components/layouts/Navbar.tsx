@@ -53,7 +53,7 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue("brand.black", "brand.white")} px={4} py={2}>
+      <Box bg="brand.black" px={4} py={2}>
         <Flex
           h={20}
           alignItems={"center"}
@@ -76,7 +76,7 @@ export default function Simple() {
               alignItems={"center"}
               paddingRight={"6"}
               fontWeight={500}
-              textColor={useColorModeValue("brand.white", "brand.black")}
+              textColor={"brand.white"}
             >
               <HStack
                 as={"nav"}
@@ -105,7 +105,7 @@ export default function Simple() {
                   variant={"link"}
                   cursor={"pointer"}
                   minW={0}
-                  bg={useColorModeValue("brand.white", "brand.brand.black")}
+                  bg={"brand.white"}
                 >
                   <Button
                     size={"lg"}
@@ -114,7 +114,7 @@ export default function Simple() {
                     fontWeight={700}
                     variant={"link"}
                     href={"#"}
-                    textColor={useColorModeValue("brand.black", "brand.white")}
+                    textColor={"brand.black"}
                   >
                     Connect Wallet
                   </Button>
