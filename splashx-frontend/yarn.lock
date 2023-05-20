@@ -3642,13 +3642,6 @@ check-error@^1.0.2:
   resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
   integrity sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==
 
-chiaki@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/chiaki/-/chiaki-2.0.0.tgz#2fa2b4f3d1ff9ba87ee3860128053d62245afc1e"
-  integrity sha512-XCLb713fLcGC4hFG+3Fn9n80jws7vJsaF0TEOBp59OvtCRK7S+0UF4+DCvcSvs51M/dj2IHzn0667jd5MPb5oQ==
-  dependencies:
-    unstreamify "^2.0.0"
-
 chokidar@3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
@@ -5810,13 +5803,6 @@ micromatch@^4.0.4:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
-midjourney-client@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/midjourney-client/-/midjourney-client-1.0.8.tgz#2bd5aee7c120389bfaaabd12a4bc35443152ac19"
-  integrity sha512-MXrC11oJynraOmC2stpyNQlKGTayof4gqzHGogwKj+KRvulzSYLt+qKKYoajvzzF2gsYk2XjyjF91BL1T93S2w==
-  dependencies:
-    node-replicate "^2.0.0"
-
 mime-db@1.52.0:
   version "1.52.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
@@ -6044,13 +6030,6 @@ node-gyp-build@^4.2.0, node-gyp-build@^4.3.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.6.0.tgz#0c52e4cbf54bbd28b709820ef7b6a3c2d6209055"
   integrity sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==
-
-node-replicate@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/node-replicate/-/node-replicate-2.0.0.tgz#227eccabdc52fd7e02a5d35d194f76700de75c44"
-  integrity sha512-vJ8wDLpDh+zEznpTgRdO52+JG5g/mEaon0y9DTkvfMwZ16XjuxnCUGpfS9P8Oea3VXH1+bZJ++a/NzjPhN6QaA==
-  dependencies:
-    chiaki "^2.0.0"
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
@@ -7304,11 +7283,6 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
-
-unstreamify@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/unstreamify/-/unstreamify-2.0.0.tgz#fad10842cde15a386fa5b590fb465c622ede7ba8"
-  integrity sha512-u4UWtoJglG5dlinKPrr0cdGOL9eGozILn1EmzQ0oforHVM+M/WB8ibwwlEQlbTYMDMIJe6TK/sbVN5WS7ePOxA==
 
 untildify@^4.0.0:
   version "4.0.0"
