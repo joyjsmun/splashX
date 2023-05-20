@@ -9,6 +9,16 @@ import "@fontsource/figtree/700.css";
 import "@fontsource/figtree/900.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/900.css";
+import {
+  ThirdwebProvider,
+  metamaskWallet,
+  walletConnect,
+  paperWallet,
+  magicLink,
+  smartWallet,
+  localWallet,
+} from "@thirdweb-dev/react";
+import { walletconnect } from "web3modal/dist/providers/connectors";
 
 const chakraTheme: ThemeConfig = extendTheme({
   styles: {
@@ -54,10 +64,24 @@ const chakraTheme: ThemeConfig = extendTheme({
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider resetCSS theme={chakraTheme}>
-      <Layout title="SplashX - Earn by Creating & Watching AI-generated Anime">
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <ThirdwebProvider
+      activeChain="ethereum"
+      supportedWallets={[
+        metamaskWallet(),
+        walletConnect(),
+        smartWallet({
+          factoryAddress: "",
+          thirdwebApiKey: "",
+          gasless: true,
+          personalWallets: [metamaskWallet(), localWallet()],
+        }),
+      ]}
+    >
+      <ChakraProvider resetCSS theme={chakraTheme}>
+        <Layout title="SplashX - Earn by Creating & Watching AI-generated Anime">
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </ThirdwebProvider>
   );
 }

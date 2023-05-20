@@ -15,6 +15,8 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { ConnectWallet } from "@thirdweb-dev/react";
+import styles from "../../styles/Home.module.css";
 // import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Links = [
@@ -98,7 +100,7 @@ export default function Simple() {
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button> */}
               <Menu>
-                <MenuButton
+                {/* <MenuButton
                   as={Button}
                   rounded={"lg"}
                   padding={"2"}
@@ -106,8 +108,8 @@ export default function Simple() {
                   cursor={"pointer"}
                   minW={0}
                   bg={"brand.white"}
-                >
-                  <Button
+                > */}
+                {/* <Button
                     size={"lg"}
                     as={"a"}
                     fontSize={"md"}
@@ -117,8 +119,13 @@ export default function Simple() {
                     textColor={"brand.black"}
                   >
                     Connect Wallet
-                  </Button>
-                </MenuButton>
+                  </Button> */}
+                <ConnectWallet
+                  theme="light"
+                  btnTitle="Login SplashX"
+                  className={styles.customWallet}
+                />
+                {/* </MenuButton> */}
               </Menu>
             </Stack>
           </Flex>
