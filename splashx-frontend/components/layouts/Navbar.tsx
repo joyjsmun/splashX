@@ -15,7 +15,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import styles from "../../styles/Home.module.css";
 // import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
@@ -52,6 +52,9 @@ const NavLink = ({
 export default function Simple() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const address = useAddress();
+  console.log(address);
 
   return (
     <>
