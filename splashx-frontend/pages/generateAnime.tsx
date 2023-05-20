@@ -7,7 +7,7 @@ import {
   InputGroup,
   InputLeftAddon,
 } from "@chakra-ui/react";
-import midjourney from "midjourney-client";
+
 import { useState } from "react";
 
 import Replicate from "replicate";
