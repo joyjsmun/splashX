@@ -18,7 +18,7 @@ import {
   smartWallet,
   localWallet,
 } from "@thirdweb-dev/react";
-import { walletconnect } from "web3modal/dist/providers/connectors";
+
 import { FACTORY_ADDRESS, TH_API_KEY } from "@/const/addresses";
 
 const chakraTheme: ThemeConfig = extendTheme({
