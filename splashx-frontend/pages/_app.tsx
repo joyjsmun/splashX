@@ -19,6 +19,7 @@ import {
   localWallet,
 } from "@thirdweb-dev/react";
 import { walletconnect } from "web3modal/dist/providers/connectors";
+import { FACTORY_ADDRESS, TH_API_KEY } from "@/const/addresses";
 
 const chakraTheme: ThemeConfig = extendTheme({
   styles: {
@@ -65,15 +66,15 @@ const chakraTheme: ThemeConfig = extendTheme({
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
-      activeChain="ethereum"
+      activeChain="mumbai"
       supportedWallets={[
         metamaskWallet(),
-        walletConnect(),
+        // walletConnect(),
         smartWallet({
-          factoryAddress: "",
-          thirdwebApiKey: "",
+          factoryAddress:FACTORY_ADDRESS,
+          thirdwebApiKey: TH_API_KEY,
           gasless: true,
-          personalWallets: [metamaskWallet(), localWallet()],
+          personalWallets: [metamaskWallet(),walletConnect(),localWallet({persist:true})],
         }),
       ]}
     >
