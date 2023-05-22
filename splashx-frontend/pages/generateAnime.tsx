@@ -1,52 +1,69 @@
-import { Box, Container, Stack } from "@chakra-ui/layout";
+import {
+  Box,
+  Container,
+  Flex,
+  HStack,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/layout";
 import {
   Button,
   FormControl,
   FormLabel,
+  Image,
   Input,
   InputGroup,
   InputLeftAddon,
 } from "@chakra-ui/react";
 
-import { useState } from "react";
-
-import Replicate from "replicate";
-
-const auth = process.env.REPLICATE_API_TOKEN || ""; // use empty string if undefined
-const replicate = new Replicate({
-  auth,
-});
-
 export default function generateAnime() {
-  const [inputPrompt, setInputPrompt] = useState("");
-
-  const handleGenerateAnime = async () => {
-    const prediction = await replicate.predictions.create({
-      version:
-        "9936c2001faa2194a261c01381f90e65261879985476014a0a37a334593a05eb",
-      input: {
-        prompt: `mdjrny-v4 ${inputPrompt}`,
-      },
-      webhook: "http://localhost:3000/generateAnime",
-      webhook_events_filter: ["completed"],
-    });
-    console.log(prediction);
-    // handle prediction result here
-  };
-
   return (
-    <Container width={"100vw"} height={"100vh"}>
-      <Stack spacing={4}>
-        <Input
-          placeholder="Prompt Your Anime"
-          value={inputPrompt}
-          onChange={(e) => setInputPrompt(e.target.value)}
-          color={"white"}
-        />
-      </Stack>
-      <Button placeholder="Generate Anime" onClick={handleGenerateAnime}>
-        Generate Anime
-      </Button>
-    </Container>
+    <Box pb={10}>
+      <Flex
+        flexDirection={"row-reverse"}
+        h={"auto"}
+        width={"80%"}
+        m={0}
+        py={20}
+        color={"brand.white"}
+        gap={10}
+        justifyContent={"center"}
+      >
+        <VStack width={"full"}>
+          <Text>Main Image Thumbnail</Text>
+          <Box width={"full"} height={"50vh"} border={"2px solid yellow"}>
+            <Image></Image>
+          </Box>
+        </VStack>
+        <VStack width={"full"}>
+          <VStack width={"full"}>
+            <Text>Title</Text>
+            <Input placeholder="Anime Title"></Input>
+          </VStack>
+          <VStack width={"full"}>
+            <Text>NFT Minting</Text>
+            <HStack width={"full"}>
+              <VStack width={"full"}>
+                <Text>Max Supply</Text>
+                <Input placeholder="1000"></Input>
+              </VStack>
+              <VStack width={"full"}>
+                <Text>Price Per NFT(Matic)</Text>
+                <Input placeholder="1000"></Input>
+              </VStack>
+            </HStack>
+            <VStack width={"full"}>
+              <Text>Description</Text>
+              <Input placeholder="1000"></Input>
+            </VStack>
+            <VStack width={"full"}>
+              <Text>Anime Video</Text>
+              <Input placeholder="1000"></Input>
+            </VStack>
+          </VStack>
+        </VStack>
+      </Flex>
+    </Box>
   );
 }
