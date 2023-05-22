@@ -1,6 +1,6 @@
 import AnimeInfo from "@/components/AnimeInfo";
 import AnimePlayer from "@/components/layouts/AnimePlayer";
-import MintNFT from "@/components/MintNFT";
+import ClaimNFT from "@/components/ClaimNFT";
 import NextAnime from "@/components/NextAnime";
 import TrendingAnime from "@/components/TreandingAnime";
 import { Box, Flex } from "@chakra-ui/react";
@@ -21,7 +21,7 @@ export default function watchAnime() {
           gap={10}
         >
           <AnimeInfo />
-          <MintNFT />
+          <ClaimNFT />
           <NextAnime />
           <TrendingAnime />
         </Flex>

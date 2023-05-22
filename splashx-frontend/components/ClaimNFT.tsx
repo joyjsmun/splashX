@@ -1,6 +1,6 @@
 import { Box, Button, HStack, Text, VStack } from "@chakra-ui/react";
 
-export default function MintNFT() {
+export default function ClaimNFT() {
   return (
     <Box>
       <HStack justifyContent={"space-between"} width={"95%"}>
@@ -67,7 +67,7 @@ export default function MintNFT() {
             fontWeight={700}
             _hover={{ bg: "blue.400" }}
           >
-            Mint Anime as NFT
+            Claim Anime as NFT
           </Button>
         </Box>
       </HStack>
