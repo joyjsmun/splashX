@@ -13,8 +13,6 @@ import {
   ThirdwebProvider,
   metamaskWallet,
   walletConnect,
-  paperWallet,
-  magicLink,
   smartWallet,
   localWallet,
 } from "@thirdweb-dev/react";
@@ -71,10 +69,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         metamaskWallet(),
         // walletConnect(),
         smartWallet({
-          factoryAddress:FACTORY_ADDRESS,
+          factoryAddress: FACTORY_ADDRESS,
           thirdwebApiKey: TH_API_KEY,
           gasless: true,
-          personalWallets: [metamaskWallet(),walletConnect(),localWallet({persist:true})],
+          personalWallets: [
+            metamaskWallet(),
+            walletConnect(),
+            localWallet({ persist: true }),
+          ],
         }),
       ]}
     >

@@ -19,51 +19,70 @@ import {
 
 export default function generateAnime() {
   return (
-    <Box pb={10}>
+    <Flex
+      pb={10}
+      width={"full"}
+      alignItems={"center"}
+      display={"flex"}
+      flexDirection={"column"}
+    >
       <Flex
         flexDirection={"row-reverse"}
         h={"auto"}
         width={"80%"}
         m={0}
         py={20}
+        gap={"10vw"}
         color={"brand.white"}
-        gap={10}
-        justifyContent={"center"}
+        justifyItems={"center"}
       >
         <VStack width={"full"}>
           <Text>Main Image Thumbnail</Text>
-          <Box width={"full"} height={"50vh"} border={"2px solid yellow"}>
+          <Box
+            width={"80%"}
+            height={"50vh"}
+            border={"2px dashed gray"}
+            padding={"3vw"}
+          >
             <Image></Image>
           </Box>
         </VStack>
-        <VStack width={"full"}>
-          <VStack width={"full"}>
+        <Flex
+          flexDirection={"column"}
+          width={"full"}
+          height={"full"}
+          gap={"2vw"}
+        >
+          <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
             <Text>Title</Text>
             <Input placeholder="Anime Title"></Input>
           </VStack>
-          <VStack width={"full"}>
+          <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
             <Text>NFT Minting</Text>
             <HStack width={"full"}>
-              <VStack width={"full"}>
+              <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
                 <Text>Max Supply</Text>
                 <Input placeholder="1000"></Input>
               </VStack>
-              <VStack width={"full"}>
+              <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
                 <Text>Price Per NFT(Matic)</Text>
                 <Input placeholder="1000"></Input>
               </VStack>
             </HStack>
-            <VStack width={"full"}>
+            <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
               <Text>Description</Text>
-              <Input placeholder="1000"></Input>
+              <Input placeholder="Please put describe about the anime."></Input>
             </VStack>
-            <VStack width={"full"}>
-              <Text>Anime Video</Text>
+            <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
+              <Text>Upload Anime Video</Text>
               <Input placeholder="1000"></Input>
             </VStack>
           </VStack>
-        </VStack>
+        </Flex>
       </Flex>
-    </Box>
+      <Box width={"30%"}>
+        <Button>Upload & Generate NFT</Button>
+      </Box>
+    </Flex>
   );
 }
