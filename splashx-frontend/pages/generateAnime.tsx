@@ -1,3 +1,4 @@
+import MintingNFT from "@/components/MintingNFT";
 import {
   Box,
   Container,
@@ -9,17 +10,21 @@ import {
 } from "@chakra-ui/layout";
 import {
   Button,
+  Checkbox,
   FormControl,
   FormLabel,
   Image,
   Input,
   InputGroup,
   InputLeftAddon,
+  Radio,
+  RadioGroup,
   Textarea,
   useBreakpointValue,
+  useRadio,
 } from "@chakra-ui/react";
 
-export default function generateAnime() {
+export default function generateAnime(props: any) {
   return (
     <Flex
       pb={10}
@@ -65,6 +70,15 @@ export default function generateAnime() {
               </Text>
               <Textarea placeholder="Please put describe about the anime."></Textarea>
             </VStack>
+            {/* <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
+              <Text fontSize={"2xl"} fontWeight={"semibold"}>
+                Audience
+              </Text>
+              <RadioGroup name="form-name">
+                <Radio>Yes, It's for Kids</Radio>
+                <Radio>No, It's not for kids</Radio>
+              </RadioGroup>
+            </VStack> */}
             <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
               <Box width={"30%"}>
                 <Button
@@ -80,34 +94,7 @@ export default function generateAnime() {
                 </Button>
               </Box>
             </VStack>
-            <VStack width={"full"} alignItems={"flex-start"} paddingTop={"2vw"}>
-              <Text fontSize={"2xl"} fontWeight={"semibold"}>
-                NFT Minting
-              </Text>
-              <HStack width={"full"} gap={"2vw"}>
-                <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
-                  <Text>Max Supply</Text>
-                  <Input placeholder="1000"></Input>
-                </VStack>
-                <VStack width={"full"} alignItems={"flex-start"} gap={"1vw"}>
-                  <Text>Price Per NFT(Matic)</Text>
-                  <Input placeholder="1000"></Input>
-                </VStack>
-              </HStack>
-              <Box width={"30%"} paddingTop={"1vw"}>
-                <Button
-                  size={useBreakpointValue({ base: "md", md: "lg" })}
-                  bgGradient="linear(to-l,  brand.darkBlue,#012b9e,)"
-                  rounded={"lg"}
-                  color={"white"}
-                  mt={2}
-                  fontWeight={700}
-                  _hover={{ bg: "blue.400", shadow: "md" }}
-                >
-                  Mint NFT
-                </Button>
-              </Box>
-            </VStack>
+            <MintingNFT />
           </VStack>
         </Flex>
       </Flex>
