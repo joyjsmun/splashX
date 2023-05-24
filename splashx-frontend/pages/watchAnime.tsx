@@ -7,7 +7,7 @@ import { Box, Flex } from "@chakra-ui/react";
 
 export default function watchAnime() {
   return (
-    <Box pb={10}>
+    <Box pb={10} height={"auto"}>
       <Flex flexDirection={"column"} alignItems={"center"}>
         <AnimePlayer />
         <Flex
