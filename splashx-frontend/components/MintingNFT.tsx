@@ -36,9 +36,9 @@ export default function MintingNFT() {
             {...getRootProps()}
           >
             <input {...getInputProps()} />
-            <button>Drop Files here to upload them to IPFS</button>
+            <button>Drop Files here</button>
           </Box>
-          <Text>IPFS File Preview</Text>
+          <Text>File Preview</Text>
           <Box>
             {uris.map((uri) => {
               return <MediaRenderer key={uri} src={uri} alt="image" />;
