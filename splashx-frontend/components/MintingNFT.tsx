@@ -21,7 +21,7 @@ export default function MintingNFT() {
 
   return (
     <>
-      <VStack width={"full"} alignItems={"flex-start"} paddingTop={"2vw"}>
+      <VStack width={"100%"} alignItems={"flex-start"} paddingTop={"2vw"}>
         <Text fontSize={"2xl"} fontWeight={"semibold"}>
           NFT Minting
         </Text>

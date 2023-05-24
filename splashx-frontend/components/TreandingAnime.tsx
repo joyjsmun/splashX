@@ -1,4 +1,12 @@
-import { Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Image,
+  Text,
+  VStack,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 
 export default function TrendingAnime() {
   return (
@@ -7,11 +15,20 @@ export default function TrendingAnime() {
         <Text fontSize={"4xl"} fontWeight={"bold"} pb={4}>
           Trending Anime
         </Text>
-        <HStack gap={10}>
-          <Image src="/images/trending-1.svg" boxSize={"fit-content"} />
-          <Image src="/images/trending-2.svg" boxSize={"fit-content"} />
-          <Image src="/images/trending-3.svg" boxSize={"fit-content"} />
-        </HStack>
+        <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+          <GridItem w="100%" h="10">
+            <Image src="/images/trending-1.svg" boxSize={"fit-content"} />
+          </GridItem>
+          <GridItem w="100%" h="10">
+            <Image src="/images/trending-2.svg" boxSize={"fit-content"} />
+          </GridItem>
+          <GridItem w="100%" h="10">
+            <Image src="/images/trending-3.svg" boxSize={"fit-content"} />
+          </GridItem>
+          <GridItem w="100%" h="10">
+            <Image src="/images/trending-1.svg" boxSize={"fit-content"} />
+          </GridItem>
+        </Grid>
       </VStack>
     </Box>
   );
